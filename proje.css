@@ -1,0 +1,562 @@
+/* style.css - الكود النهائي المجمع: ألوان محدثة، لوجو بارز، 2x2 Services، وزر رجوع Modal مرفوع */
+
+/* 1. التَّعْرِيفَاتُ الْأَسَاسِيَّةُ */
+:root {
+  --color-dark: #000000; /* لون النص والـ Footer (الرئيسي الداكن) */
+  --color-light: #cbc6c2; /* ذهبي فاتح/أبيض عاجي (الخلفية الرئيسية) */
+  --color-accent: #24395b; /* الأزرق الفاتح (لون التمييز) */
+  --color-gray-bg: #a4aaaa; /* لون قسم الخدمات */
+  --color-text: #000000; /* لون النصوص الثانوية */
+  --color-success: #27ae60; /* لون رسالة النجاح (الأخضر) */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light); 
+}
+
+/* 2. شَرِيطُ التَّنَقُّلِ (NAVBAR) */
+.navbar {
+  background-color: var(--color-light); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid var(--color-accent); 
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* 2.2. تعديل اللوجو: تكبير الحجم وإضافة ظل */
+.logo-img {
+  height: 80px; 
+  width: 80px; 
+  border-radius: 0; 
+  object-fit: cover;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4)); 
+}
+
+.logo-text {
+  font-size: 24px; 
+  font-weight: bold;
+  color: var(--color-dark); 
+  margin-left: 10px; 
+  letter-spacing: 2px;
+  display: none; 
+}
+
+.nav-links {
+  list-style: none;
+  display: none; 
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: var(--color-dark); 
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent); 
+}
+
+.btn-devis-nav {
+  background-color: var(--color-accent); 
+  color: var(--color-light); 
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: background-color 0.3s;
+  /* إضافة لتنسيق الزر كـ button وليس a */
+  border: none;
+  cursor: pointer;
+}
+
+.btn-devis-nav:hover {
+  background-color: #1a5786; 
+}
+
+
+/* 3. قِسْمُ الْوَاجِهَةِ (HERO SECTION) */
+.hero-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--color-light); 
+  color: var(--color-dark); 
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  color: var(--color-accent); 
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: var(--color-text); 
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); 
+  border: 4px solid rgba(36, 57, 91, 0.5); /* لون accent مع شفافية */
+  height: auto;
+}
+
+.accent-color-text {
+  color: var(--color-accent); 
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: var(--color-accent); 
+  color: var(--color-light); 
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  /* إضافة لتنسيق الزر كـ button */
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #1a5786;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-dark); 
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 2px solid var(--color-dark); 
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05); 
+  transform: scale(1.05);
+}
+
+
+/* 4. قِسْمُ الْخَدَمَاتِ (SERVICES) */
+.section-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: var(--color-gray-bg); 
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-dark); 
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr; /* عمود واحد للموبايل */
+}
+
+.service-card {
+  background-color: var(--color-light); 
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-top: 4px solid var(--color-accent); 
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+}
+
+.service-details {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-dark); 
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: var(--color-text); 
+  font-size: 14px;
+}
+
+/* 5. قِسْمُ الْمَعْلُومَاتِ (CONTACT INFO) */
+.section-contact-info {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.contact-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--color-light); 
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-dark); 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent); 
+  margin-bottom: 5px;
+}
+
+.info-data, .info-data-bold {
+  color: var(--color-text);
+}
+
+.info-data-bold {
+  font-weight: bold;
+}
+
+.whatsapp-btn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #25D366; 
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+}
+
+/* 6. الْفُوتَرُ (FOOTER) */
+.footer {
+  background-color: var(--color-dark); 
+  padding: 30px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: #ccc;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* 7. النَّافِذَةُ الْمُنْبَثِقَةُ (MODAL) */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; 
+}
+
+.modal-content {
+  background-color: var(--color-light); 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  margin: 20px auto; 
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #6b7280;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer; /* إضافة تفاعلية */
+}
+
+.modal-close:hover {
+  color: #e74c3c;
+}
+
+.btn-retour-modal {
+  position: absolute;
+  top: 8px; 
+  left: 15px;
+  color: var(--color-text);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.btn-retour-modal:hover {
+  color: var(--color-accent); 
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-dark); 
+  margin-top: 20px; 
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.modal-info-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--color-gray-bg); 
+    border-radius: 6px;
+    border-left: 5px solid var(--color-accent); 
+}
+
+.modal-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.modal-description-text {
+    color: var(--color-dark);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.devis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* تنسيق رسالة التأكيد المخفية (JavaScript) */
+.hidden-message {
+    /* تم تغيير display:none إلى opacity للتحكم السلس عبر JS */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.hidden-message.show {
+    opacity: 1;
+    height: auto;
+    padding: 30px 0;
+}
+.devis-form.hide {
+    /* عند إخفاء النموذج نظهر رسالة النجاح */
+    display: none;
+}
+/* نهاية تنسيق رسالة التأكيد */
+
+
+.form-step-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 10px;
+}
+
+.form-input {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: var(--color-accent); 
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(36, 57, 91, 0.3); 
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.form-submit {
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* 8. بُوطُونُ `DEVIS` الثَّابِتُ */
+.btn-devis-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: var(--color-accent); 
+  color: var(--color-light); 
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, background-color 0.3s;
+  animation: pulse 2s infinite;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-devis-fixed:hover {
+  background-color: #1a5786;
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+
+/* 9. التَّصْمِيمُ لِلشَّاشَاتِ الْكَبِيرَةِ (Responsive Design) */
+@media (min-width: 768px) {
+  /* NAVBAR */
+  .logo-text { display: block; }
+  .nav-links { display: flex; }
+  
+  /* HERO */
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 60px;
+  }
+  .hero-text {
+    flex: 1;
+    max-width: none;
+  }
+  .hero-image-container {
+    flex: 1;
+  }
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+  
+  /* SERVICES - لضمان ظهور عمودين في سطر واحد (2x2) */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH VITRAGE - Mohamed El Oumairi</title>
+    
+    <link rel="stylesheet" href="proje.css"> 
+    <script src="proje.js" defer></script> 
+</head>
+<body id="top">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#home" class="logo-link">
+                    <img src="./html1/logo.jpeg" alt="MH Vitrage Logo" class="logo-img">
+                    <h1 class="logo-text">VITRAGE</h1>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Nos Services</a></li>
+                    <li><a href="#info-contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <button id="open-modal-nav" class="btn-devis-nav">Demander un Devis</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Mohamed El Oumairi</p>
+                <h2 class="hero-title">
+                    SOLUTIONS DE VITRAGE ET ALUMINIUM <span class="accent-color-text">HAUT DE GAMME</span>
+                </h2>
+                <p class="hero-description">
+                    نوفر جودة صناعة وتركيب لا مثيل لها، مع خبرة تتجاوز العشر سنوات.
+                </p>
+                <div class="hero-buttons">
+                    <button id="open-modal-hero" class="btn-primary">DEMANDER UN DEVIS</button>
+                    <a href="#services" class="btn-secondary">VOIR NOS SERVICES</a>
+                </div>
+                
+            </div>
+            <div class="hero-image-container">
+                <img src="./html1/alimi.jpeg" alt="Façade en aluminium" class="hero-image" />
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="section-services">
+        <h3 class="section-title">NOS DOMAINES D'EXPERTISE</h3>
+        
+        <div class="services-grid">
+            
+            <div class="service-card" data-service="Menuiserie Alu">
+                <img src="./html1/image1.jpg" alt="Fenêtres et Portes Aluminium" class="service-img">
+                <div class="service-details">
+                    <h4 class="card-title">Menuiserie Aluminium</h4>
+                    <p class="card-description">Conception et installation de fenêtres و portes-fenêtres sur mesure. Profilés haut de gamme garantissant une isolation thermique et acoustique optimale.</p>
+                </div>
+            </div>
+
+            <div class="service-card" data-service="Façades et Murs Rideaux">
+                <img src="./html1/image2.jpg" alt="Façades en verre et murs rideaux" class="service-img">
+                <div class="service-details">
+                    <h4 class="card-title">Façades et Murs Rideaux</h4>
+                    <p class="card-description">Expertise dans les façades vitrées structurelles et les murs rideaux. Solution élégante assurant une lumière naturelle maximale و une grande robustesse.</p>
+                </div>
+            </div>
+
+            <div class="service-card" data-service="Verrières et Garde-corps">
+                <img src="./html1/image3.jpg" alt="Verrière et Garde-corps en verre" class="service-img">
+                <div class="service-details">
+                    <h4 class="card-title">Verrières et Garde-corps</h4>
+                    <p class="card-description">Création de verrières style atelier (intérieur/extérieur) et installation de garde-corps en verre trempé pour balcons et escaliers.</p>
+                </div>
+            </div>
+
+            <div class="service-card" data-service="Travaux sur Mesure & Réparation">
+                <img src="./html1/image4.jpg" alt="Travaux sur Mesure" class="service-img">
+                <div class="service-details">
+                    <h4 class="card-title">Travaux sur Mesure & Réparation</h4>
+                    <p class="card-description">Réponse à toutes vos demandes spécifiques، découpe de verre sur mesure، et intervention rapide pour le dépannage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="info-contact" class="section-contact-info">
+        <div class="contact-card">
+            <h3 class="contact-title">CONTACT & INFORMATION</h3>
+            
+            <div class="contact-grid">
+                <div>
+                    <p class="info-label">Adresse</p>
+                    <p class="info-data">[عنوانكم التفصيلي هنا] - Maroc</p>
+                </div>
+                <div>
+                    <p class="info-label">Téléphone</p>
+                    <p class="info-data-bold">**+212 617 706 799**</p>
+                </div>
+                <div>
+                    <p class="info-label">E-mail</p>
+                    <p class="info-data">benmansourmansour24@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="whatsapp-btn-container">
+                <a href="https://wa.me/212617706799" class="btn-whatsapp">Envoyer un message sur WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">MH VITRAGE | Mohamed El Oumairi</p>
+            <p class="footer-text">© 2025 Tous droits réservés. Design Premium pour l'Aluminium.</p>
+        </div>
+    </footer>
+
+    <div id="devis-modal-wrapper" class="modal-wrapper"> 
+        <div class="modal-content">
+            
+            <span id="close-btn" class="modal-close">&times;</span> 
+            
+            <a href="#top" class="btn-retour-modal">
+                &#9664; Retour à l'accueil
+            </a>
+
+            <h4 id="modal-title" class="modal-title">DEMANDE DE DEVIS</h4>
+
+            <div id="confirmation-message" class="hidden-message" style="display: none;">
+                <h4 style="color: #27ae60; font-size: 24px; margin-bottom: 10px;">✅ تم استلام طلبكم بنجاح!</h4>
+                <p style="color: #333;">شكراً لثقتكم. سنقوم بمراجعة التفاصيل وسنتواصل معكم خلال 24 ساعة كحد أقصى.</p>
+                <button id="close-modal-success" class="btn-primary" style="margin-top: 20px;">إغلاق والعودة للصفحة الرئيسية</button>
+            </div>
+            
+           <form id="devis-form" class="devis-form" action="https://formsubmit.co/benmansourmansour24@gmail.com" method="POST">
+                
+                <div class="modal-info-block">
+                    <img src="./html1/image5.jpg" alt="Image de Demande de Devis" class="modal-image" />
+                    <p class="modal-description-text">
+                        Décrivez votre projet le plus précisément possible (dimensions, type de verre/aluminium, localisation). Notre équipe vous contactera sous 24h avec une estimation gratuite et détaillée.
+                    </p>
+                </div>
+                
+                <p class="form-step-title">1. Quel type de service vous intéresse ?</p>
+                <select name="service" required class="form-input">
+                    <option value="" disabled selected>-- Choisissez un service --</option>
+                    <option value="Menuiserie Alu">Menuiserie Aluminium (Fenêtres/Portes)</option>
+                    <option value="Façades">Façades et Murs Rideaux</option>
+                    <option value="Verrières">Verrières et Garde-corps</option>
+                    <option value="Sur Mesure">Travaux sur Mesure & Réparation</option>
+                    <option value="Autre">Autre / Spécifier</option>
+                </select>
+                
+                <p class="form-step-title">2. Vos coordonnées و تفاصيل المشروع:</p>
+                <input type="text" name="name" placeholder="الاسم الكامل" required class="form-input" />
+                <input type="tel" name="phone" placeholder="رقم الهاتف (ضروري)" required class="form-input" />
+                <input type="email" name="_replyto" placeholder="البريد الإلكتروني" class="form-input" /> 
+                <textarea name="message" placeholder="تفاصيل المشروع والأبعاد التقريبية" class="form-input form-textarea"></textarea>
+                
+                <input type="hidden" name="_next" value="https://mh-vitrage.com/"> 
+                <input type="hidden" name="_subject" value="Nouvelle Demande de Devis - MH Vitrage">
+                <input type="hidden" name="_captcha" value="false"> <button type="submit" id="submit-btn" class="btn-primary form-submit">ENVOYER LA DEMANDE</button>
+            </form>
+        </div>
+    </div>
+
+    <button id="open-modal-fixed" class="btn-devis-fixed">
+        Devis Rapide
+    </button>
+
+</body>
+</html>
